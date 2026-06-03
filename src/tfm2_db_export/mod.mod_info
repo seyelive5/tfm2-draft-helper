@@ -1,0 +1,8 @@
+{
+  "name": "TFM2 추천기 통계 추출기",
+  "author": "seyelive0",
+  "version": "1.0.0",
+  "description": "라이브 게임 DB(현재 패치 통계/매치/풀)를 읽어 드래프트 추천기용 통계 파일을 생성합니다. save-probe 대체(0.4.7 세이브 포맷 변경 대응). 읽기 전용, 게임 변경 없음. 오버레이 런처도 자동 실행.",
+  "last_updated": "2026-06-02",
+  "dependencies": [ { "mod_id": "base", "version": ">=0.4.7" } ]
+}

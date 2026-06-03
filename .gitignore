@@ -1,0 +1,10 @@
+# Rust build output
+target/
+**/target/
+Cargo.lock
+
+# local data / temp
+*.tmp
+stats/
+draft_weights.tsv
+report.html

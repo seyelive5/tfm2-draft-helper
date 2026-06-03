@@ -1,0 +1,30 @@
+[package]
+name = "draft-overlay"
+version = "0.1.0"
+edition = "2021"
+
+# Two artifacts:
+#  - cdylib  → the injected overlay DLL (hooks OpenGL, draws via imgui)
+#  - bin     → the injector that loads the DLL into TeamfightManager2.exe
+[lib]
+name = "draft_overlay"
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "inject-overlay"
+path = "src/bin/inject.rs"
+
+# meta/champion analysis HTML report generator (std-only; reuses engine.rs ko_name)
+[[bin]]
+name = "meta-report"
+path = "src/bin/meta-report.rs"
+
+# validation: does the winrate signal predict match winners? (std-only)
+[[bin]]
+name = "backtest"
+path = "src/bin/backtest.rs"
+
+[dependencies]
+hudhook = "0.9"
+
+[workspace]
